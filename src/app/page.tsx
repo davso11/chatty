@@ -1,14 +1,13 @@
-"use client";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { UnAuth } from "./components/unauth";
 
-import { toast } from "sonner";
-import { Button } from "~/components/ui/button";
+export default async function Root() {
+  const session = await getServerSession();
 
-export default function Home() {
-  const makeToast = () => toast.warning("Chatty en construction...");
+  if (session) {
+    redirect("/home");
+  }
 
-  return (
-    <div className="min-h-screen grid place-content-center">
-      <Button onClick={makeToast}>Toast 🔔</Button>
-    </div>
-  );
+  return <UnAuth />;
 }
