@@ -15,7 +15,7 @@ export function Sidebar() {
     <aside className="flex w-[19rem] flex-col gap-y-10 border-r px-4 pb-4 pt-7">
       {/* LOGO */}
       <Link href="/" className="flex w-fit items-center gap-x-2.5 px-3">
-        <img src="/logo2.svg" alt="Logo Chatty" className="h-7 w-7" />
+        <img src="/logo.svg" alt="Logo Chatty" className="h-7 w-7" />
         <p className="text-xl font-bold">Chatty</p>
       </Link>
 
