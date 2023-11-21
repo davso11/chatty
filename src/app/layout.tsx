@@ -1,9 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SessionProvider } from "./session-provider";
 import { getServerSession } from "next-auth";
 import { Toaster } from "sonner";
-import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chatty",
+  title: "Bienvenue sur Chatty",
   description: "Restez en contact avec vos proches",
 };
 
