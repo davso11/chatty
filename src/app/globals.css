@@ -74,3 +74,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .nav-item {
+    @apply flex items-center gap-x-4;
+  }
+
+  .nav-item-title {
+    @apply text-sm text-zinc-400;
+  }
+}
+
+@layer utilities {
+  .center-flex {
+    @apply flex items-center justify-center;
+  }
+
+  .center-absolute {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+  }
+
+  .desc {
+    @apply text-muted-foreground;
+  }
+}
