@@ -25,18 +25,33 @@ export function AuthCard({
         <CardDescription>pour accéder à votre espace Chatty</CardDescription>
       </CardHeader>
       <CardContent>
-        <Button
-          variant="outline"
-          className="w-full"
-          onClick={() =>
-            signIn("google", {
-              callbackUrl: redirect,
-            })
-          }
-        >
-          <img src="/logo-google.svg" className="mr-2 h-4 w-4" />
-          Connectez-vous avec Google
-        </Button>
+        <div className="flex flex-col gap-y-2">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() =>
+              signIn("google", {
+                callbackUrl: redirect,
+              })
+            }
+          >
+            <img src="/logo-google.svg" className="mr-2 h-4 w-4" />
+            Connectez-vous avec Google
+          </Button>
+          <Button
+            disabled={process.env.NODE_ENV !== "production"}
+            variant="outline"
+            className="w-full"
+            onClick={() =>
+              signIn("facebook", {
+                callbackUrl: redirect,
+              })
+            }
+          >
+            <img src="/logo-facebook.svg" className="mr-2 h-4 w-4" />
+            Connectez-vous avec Facebook
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
